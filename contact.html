@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Vinni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- ===========================================================
+       🧭 NAVIGATION BAR
+  ============================================================ -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html"><<"Ujwala";</a>
+      <button id="nav-toggle" aria-label="toggle-nav">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="biodata.html">Bio-data</a></li>
+      </ul>
+      <label class="theme-switch" title="Toggle theme">
+  <input type="checkbox" id="theme-toggle">
+  <span class="slider round"></span>
+</label>
+
+    </nav>
+  </header>
+
+  <!-- ===========================================================
+       💌 CONTACT SECTION
+  ============================================================ -->
+  <main class="contact-section container">
+    <h1 class="contact-title">Get in Touch</h1>
+    <p class="contact-subtitle">Let’s connect! Whether you have a question, a project, or just want to say hi — I’d love to hear from you.</p>
+
+    <div class="contact-wrapper">
+      <!-- Left Side: Info -->
+      <div class="contact-info">
+        <h3>Contact Info</h3>
+        <p><i class="fa-solid fa-envelope"></i> ujwalashetty660@gmail.com</p>
+        <!-- <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p> -->
+        <p><i class="fa-solid fa-location-dot"></i> Mangaluru, India</p>
+
+        <div class="contact-socials">
+          <a href="github.com/Ujwalashetty18"><i class="fa-brands fa-github"></i></a>
+          <a href="linkedin.com/in/ujwala-shetty-6510752a2"><i class="fa-brands fa-linkedin"></i></a>
+          <!-- <a href="#"><i class="fa-brands fa-instagram"></i></a> -->
+          <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a> -->
+        </div>
+      </div>
+
+      <!-- Right Side: Form -->
+      <form id="contact-form" novalidate class="contact-form">
+        <div class="input-group">
+          <input type="text" id="cname" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <input type="email" id="cemail" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <textarea id="cmessage" placeholder="Your Message..." required></textarea>
+        </div>
+        <button type="submit" class="btn send-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <p id="form-msg" class="form-msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- ===========================================================
+       📞 FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <p>Made with 💜 by Vinni | <a href="https://github.com/">GitHub</a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
