@@ -1,0 +1,49 @@
+# Ujwala — Personal Portfolio Website
+
+A simple and responsive personal portfolio website built using HTML, CSS, and JavaScript.  
+It includes light/dark mode, floating icon animations, and a working contact form powered by EmailJS.
+
+---
+
+## Features
+
+- Responsive design for all devices
+- Light and dark mode toggle
+- Animated floating icons
+- Contact form with EmailJS integration
+- Smooth scrolling and hover effects
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+- Font Awesome (Icons)
+- EmailJS (Contact form)
+
+---
+
+## Folder Structure
+
+project/
+│
+├── index.html
+├── about.html
+├── skills.html
+├── projects.html
+├── contact.html
+├── biodata.html
+│
+├── css/
+│ └── style.css
+│
+├── js/
+│ └── script.js
+└── assets/
+
+## ✨ Preview
+
+> 🎨 **Live Demo:** [Click Here to View](ujwala-resume-phi.vercel.app)  
+> 🖋️ Designed & Developed by **Ujwala Shetty**
