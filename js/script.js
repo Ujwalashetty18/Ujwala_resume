@@ -126,73 +126,57 @@ $(function () {
       return;
     }
 
-    $("#form-msg").text("✅ Thanks! Message noted (demo).");
+    $("#form-msg").text("✅ Thanks! Message noted .");
     $(this)[0].reset();
   });
 });
 
 /* ===========================================================
-   💫 FLOATING TECH ICONS — SMOOTH CONTINUOUS DRIFT EFFECT
+   💫 GLOBAL FLOATING ICONS — Animate in All Sections
    =========================================================== */
 window.addEventListener("load", () => {
-  const hero = document.querySelector(".hero");
-  const icons = document.querySelectorAll(".floating-icons .icon");
+  const containers = document.querySelectorAll(".floating-icons");
 
-  if (!hero || icons.length === 0) return;
+  containers.forEach(container => {
+    const icons = container.querySelectorAll(".icon");
+    const iconData = [];
 
-  hero.style.position = "relative";
-  const iconData = [];
+    icons.forEach(icon => {
+      const size = 18 + Math.random() * 25;
+      const x = Math.random() * container.clientWidth;
+      const y = Math.random() * container.clientHeight;
+      const vx = (Math.random() - 0.5) * 1.2;
+      const vy = (Math.random() - 0.5) * 1.2;
+      const rotation = Math.random() * 360;
 
-  // initialize random positions and velocities
-  icons.forEach((icon) => {
-    const size = 20 + Math.random() * 20;
-    const x = Math.random() * hero.clientWidth;
-    const y = Math.random() * hero.clientHeight;
-    const vx = (Math.random() - 0.5) * 1.5; // horizontal speed
-    const vy = (Math.random() - 0.5) * 1.5; // vertical speed
-    const rotation = Math.random() * 360;
+      icon.style.fontSize = `${size}px`;
+      icon.style.left = `${x}px`;
+      icon.style.top = `${y}px`;
 
-    icon.style.position = "absolute";
-    icon.style.fontSize = `${size}px`;
-    icon.style.left = `${x}px`;
-    icon.style.top = `${y}px`;
-    icon.style.opacity = 0.4 + Math.random() * 0.6;
-
-    iconData.push({ icon, x, y, vx, vy, rotation });
-  });
-
-  // smooth animation
-  function animate() {
-    const width = hero.clientWidth;
-    const height = hero.clientHeight;
-
-    iconData.forEach((data) => {
-      data.x += data.vx;
-      data.y += data.vy;
-      data.rotation += 0.2;
-
-      // bounce at edges
-      if (data.x <= 0 || data.x >= width - 40) data.vx *= -1;
-      if (data.y <= 0 || data.y >= height - 40) data.vy *= -1;
-
-      data.icon.style.transform = `translate(${data.x}px, ${data.y}px) rotate(${data.rotation}deg)`;
+      iconData.push({ icon, x, y, vx, vy, rotation });
     });
 
-    requestAnimationFrame(animate);
-  }
+    function animate() {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
 
-  animate();
+      iconData.forEach(d => {
+        d.x += d.vx;
+        d.y += d.vy;
+        d.rotation += 0.2;
 
-  // Update positions when resizing
-  window.addEventListener("resize", () => {
-    iconData.forEach((data) => {
-      data.x = Math.min(data.x, hero.clientWidth - 40);
-      data.y = Math.min(data.y, hero.clientHeight - 40);
-    });
+        if (d.x <= 0 || d.x >= width - 30) d.vx *= -1;
+        if (d.y <= 0 || d.y >= height - 30) d.vy *= -1;
+
+        d.icon.style.transform = `translate(${d.x}px, ${d.y}px) rotate(${d.rotation}deg)`;
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
   });
 });
-
-
 
 
 
@@ -237,9 +221,70 @@ window.addEventListener("resize", () => {
             }, index * 200); // 0.2s delay between paragraphs
           }
         });
-
-
-
-        
-
   
+    /* ===========================================================
+   💌 CONTACT FORM — SEND EMAIL USING EMAILJS (Enhanced Version)
+   =========================================================== */
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize EmailJS with your public key
+  emailjs.init("lGLVAfblRMrQum157");
+
+  const form = document.getElementById("contact-form");
+  const msg = document.getElementById("form-msg");
+  const button = form.querySelector(".send-btn");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("cname").value.trim();
+    const email = document.getElementById("cemail").value.trim();
+    const message = document.getElementById("cmessage").value.trim();
+
+    // Simple validation
+    if (!name || !email || !message) {
+      msg.textContent = "⚠️ Please fill in all fields.";
+      msg.style.color = "orange";
+      return;
+    }
+
+    // Disable button + show loading animation
+    button.disabled = true;
+    button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+    // Send message using EmailJS
+    emailjs
+      .send("service_vk7j3dr", "template_vtil6l8", {
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        // Success
+        msg.textContent = "✅ Message sent successfully!";
+        msg.style.color = "lightgreen";
+
+        // Reset form
+        form.reset();
+
+        // Button reverts after 2 sec
+        setTimeout(() => {
+          button.disabled = false;
+          button.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+        }, 1500);
+
+        // Message fades out after 5 sec
+        setTimeout(() => {
+          msg.textContent = "";
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        msg.textContent = "❌ Failed to send message. Please try again.";
+        msg.style.color = "red";
+
+        // Re-enable button
+        button.disabled = false;
+        button.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+      });
+  });
+});
