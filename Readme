@@ -6,27 +6,24 @@ It includes light/dark mode, floating icon animations, and a working contact for
 ---
 
 ## Features
-
-- Responsive design for all devices
-- Light and dark mode toggle
-- Animated floating icons
-- Contact form with EmailJS integration
-- Smooth scrolling and hover effects
+- Responsive design for all devices  
+- Light and dark mode toggle  
+- Animated floating icons  
+- Contact form with EmailJS integration  
+- Smooth scrolling and hover effects  
 
 ---
 
 ## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS)
-- Font Awesome (Icons)
-- EmailJS (Contact form)
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla JS)  
+- Font Awesome (Icons)  
+- EmailJS (Contact form)  
 
 ---
 
 ## Folder Structure
-
 project/
 │
 ├── index.html
