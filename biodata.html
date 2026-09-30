@@ -1,98 +1,320 @@
+
 <!doctype html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="utf-8" />
+
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>Bio-data</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
   <link rel="stylesheet" href="css/style.css">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
+
   <!-- ===========================================================
        🧭 NAVIGATION BAR
   ============================================================ -->
+
   <header class="site-header">
+
     <nav class="navbar">
+
       <a class="brand" href="index.html"><<"Ujwala";</a>
+
       <button id="nav-toggle" aria-label="toggle-nav">☰</button>
+
       <ul class="nav-links">
+
         <li><a href="index.html">Home</a></li>
+
         <li><a href="about.html">About Me</a></li>
+
         <li><a href="skills.html">Skills</a></li>
+
         <li><a href="projects.html">Projects</a></li>
+
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="biodata.html" class="active">Bio-data</a></li>
+
+        <li>
+          <a href="biodata.html" class="active">Bio-data</a>
+        </li>
+
       </ul>
+
       <label class="theme-switch" title="Toggle theme">
-  <input type="checkbox" id="theme-toggle">
-  <span class="slider round"></span>
-</label>
+
+        <input type="checkbox" id="theme-toggle">
+
+        <span class="slider round"></span>
+
+      </label>
 
     </nav>
+
   </header>
+
 
   <!-- ===========================================================
        🧾 BIO-DATA SECTION
   ============================================================ -->
+
   <main class="biodata-section container">
+
     <h1 class="biodata-title">Bio-data</h1>
 
     <div class="biodata-card">
+
+      <!-- Profile Header -->
+
       <div class="biodata-header">
-        <img src="assets/Girl Coder.png" alt="Profile" class="bio-pic">
+
+        <img
+          src="assets/Girl Coder.png"
+          alt="Profile"
+          class="bio-pic"
+        >
+
         <div>
-          <h2>Ujwala</h2>
-          <p class="bio-sub">Aspiring Web Developer 💻</p>
+
+          <h2>Ujwala Shetty</h2>
+
+          <p class="bio-sub">
+            Computer Science & Engineering Student | Full-Stack Developer 💻
+          </p>
+
         </div>
+
       </div>
 
+
+      <!-- Personal / Professional Details -->
+
       <div class="biodata-details">
+
+
+        <!-- Name -->
+
         <div class="bio-row">
-          <i class="fa-solid fa-user icon"></i><span class="label">Name:</span> <span class="value">Ujwala Shetty</span>
+
+          <i class="fa-solid fa-user icon"></i>
+
+          <span class="label">Name:</span>
+
+          <span class="value">
+            Ujwala Shetty
+          </span>
+
         </div>
+
+
+        <!-- Education -->
+
         <div class="bio-row">
-          <i class="fa-solid fa-cake-candles icon"></i><span class="label">DOB:</span> <span class="value">18 January 2004</span>
+
+          <i class="fa-solid fa-graduation-cap icon"></i>
+
+          <span class="label">Education:</span>
+
+          <span class="value">
+            B.E. Computer Science & Engineering
+          </span>
+
         </div>
+
+
+        <!-- College -->
+
         <div class="bio-row">
-          <i class="fa-solid fa-location-dot icon"></i><span class="label">Address:</span> <span class="value">Mangalore</span>
+
+          <i class="fa-solid fa-building-columns icon"></i>
+
+          <span class="label">College:</span>
+
+          <span class="value">
+            A J Institute of Engineering & Technology, Mangalore
+          </span>
+
         </div>
+
+
+        <!-- Graduation -->
+
         <div class="bio-row">
-          <i class="fa-solid fa-phone icon"></i><span class="label">Contact:</span> <span class="value"> ujwalashetty660@gmail.com</span>
+
+          <i class="fa-solid fa-calendar-days icon"></i>
+
+          <span class="label">Graduation:</span>
+
+          <span class="value">
+            2027
+          </span>
+
         </div>
+
+
+        <!-- Contact -->
+
         <div class="bio-row">
-          <i class="fa-solid fa-gamepad icon"></i><span class="label">Hobbies:</span> <span class="value">Coding, Reading</span>
+
+          <i class="fa-solid fa-envelope icon"></i>
+
+          <span class="label">Contact:</span>
+
+          <span class="value">
+
+            <a href="mailto:ujwalashetty660@gmail.com">
+              ujwalashetty660@gmail.com
+            </a>
+
+          </span>
+
         </div>
+
+
+        <!-- GitHub -->
+
         <div class="bio-row">
-          <i class="fa-solid fa-brain icon"></i><span class="label">Strengths:</span> <span class="value">Problem solving, Teamwork</span>
+
+          <i class="fa-brands fa-github icon"></i>
+
+          <span class="label">GitHub:</span>
+
+          <span class="value">
+
+            <a
+              href="https://github.com/Ujwalashetty18"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/Ujwalashetty18
+            </a>
+
+          </span>
+
         </div>
+
+
+        <!-- LinkedIn -->
+
+        <div class="bio-row">
+
+          <i class="fa-brands fa-linkedin icon"></i>
+
+          <span class="label">LinkedIn:</span>
+
+          <span class="value">
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn Profile
+            </a>
+
+          </span>
+
+        </div>
+
+
+        <!-- Hobbies -->
+
+        <div class="bio-row">
+
+          <i class="fa-solid fa-gamepad icon"></i>
+
+          <span class="label">Hobbies:</span>
+
+          <span class="value">
+            Coding, Reading
+          </span>
+
+        </div>
+
+
+        <!-- Strengths -->
+
+        <div class="bio-row">
+
+          <i class="fa-solid fa-brain icon"></i>
+
+          <span class="label">Strengths:</span>
+
+          <span class="value">
+            Problem Solving, Teamwork
+          </span>
+
+        </div>
+
+
       </div>
+
     </div>
-    <!-- Floating tech icons -->
-  <div class="floating-icons" aria-hidden="true">
-    <i class="fa-brands fa-html5 icon"></i>
-    <i class="fa-brands fa-css3-alt icon"></i>
-    <i class="fa-brands fa-js icon"></i>
-    <i class="fa-brands fa-python icon"></i>
-    <i class="fa-brands fa-react icon"></i>
-    <i class="fa-brands fa-node-js icon"></i>
-    <i class="fa-solid fa-database icon"></i>
-    <i class="fa-solid fa-code icon"></i>
-    <i class="fa-brands fa-git-alt icon"></i>
-  </div>
+
+
+    <!-- ===========================================================
+         💻 FLOATING TECH ICONS
+    ============================================================ -->
+
+    <div class="floating-icons" aria-hidden="true">
+
+      <i class="fa-brands fa-html5 icon"></i>
+
+      <i class="fa-brands fa-css3-alt icon"></i>
+
+      <i class="fa-brands fa-js icon"></i>
+
+      <i class="fa-brands fa-python icon"></i>
+
+      <i class="fa-brands fa-react icon"></i>
+
+      <i class="fa-brands fa-node-js icon"></i>
+
+      <i class="fa-solid fa-database icon"></i>
+
+      <i class="fa-solid fa-code icon"></i>
+
+      <i class="fa-brands fa-git-alt icon"></i>
+
+    </div>
+
   </main>
+
 
   <!-- ===========================================================
        📞 FOOTER
   ============================================================ -->
+
   <footer class="site-footer">
-    <p>Made with 💜  by Ujwala Shetty </p>
+
+    <p>
+      Made with 💜 by Ujwala Shetty
+    </p>
+
   </footer>
 
+
   <script src="js/script.js"></script>
+
 </body>
+
 </html>
 
